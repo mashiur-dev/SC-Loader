@@ -18,6 +18,7 @@ function scloader_custom_settings(){
     
     //registering settings
     register_setting( 'scloader-settings-group', 'background_color');
+    register_setting( 'scloader-settings-group', 'background_color');
     
     //settings sections 
     add_settings_section( 'scloader-genarel-section', 'Color Section', 'genarel_section_callback', 'scloader_options.php' );
