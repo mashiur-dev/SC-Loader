@@ -84,6 +84,9 @@ function scloader_main_callbk_function(){  ?>
    
     
     <div class="wrap">
+       
+       
+       <!-- Inline style for Live View and Options -->
         <style>
 
             #scloader_live_view {
@@ -130,7 +133,16 @@ function scloader_main_callbk_function(){  ?>
             }
             
         </style>
-
+        
+        <!-- Line Script for live view -->
+        <script>
+            function loaderselectionChange(value) {
+                var liveLoaderImage = document.getElementById("scloader_live_view_img");
+                    liveLoaderImage.src = "<?php echo plugins_url( '/loaders/Preloader_" + value + ".gif', __FILE__ ); ?>";
+            }
+        </script>
+        
+        <!-- Live viw for admin -->
         <div id="scloader_live_view">
             <div class="frame">
                 <span></span>
@@ -140,6 +152,7 @@ function scloader_main_callbk_function(){  ?>
             <img id="scloader_live_view_img" src="<?php echo plugins_url( '/loaders/Preloader_'. get_option( 'select-loader' ) .'.gif', __FILE__ ); ?>">
         </div>
         
+        <!-- Options -->
         <h1 class="title">SC Loader Options</h1>
         <?php settings_errors('scloader_options.php'); ?>
         
@@ -148,14 +161,6 @@ function scloader_main_callbk_function(){  ?>
             <?php do_settings_sections( 'scloader_options.php' ); ?>
             <?php submit_button(); ?>
         </form>
-        
-        
-        <script>
-            function loaderselectionChange(value) {
-                var liveLoaderImage = document.getElementById("scloader_live_view_img");
-                    liveLoaderImage.src = "<?php echo plugins_url( '/loaders/Preloader_" + value + ".gif', __FILE__ ); ?>";
-            }
-        </script>
         
     </div>
     

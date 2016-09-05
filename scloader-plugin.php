@@ -26,20 +26,6 @@ function scloader_styles_and_script() {
 add_action('wp_enqueue_scripts', 'scloader_styles_and_script' );
 
 
-
-
-
-/******************** inline styleing ******************/
-/*function stycwplogin_theme_styles_inline() {?>
-    
-    <style type="text/css">
-
-        
-    </style>
-<?php } 
-add_action( 'wp_enqueue_scripts', 'stycwplogin_theme_styles_inline' );*/
-
-
 //adding the loader html in website
 function custom_content_after_body_open_tag() {
     ?>
