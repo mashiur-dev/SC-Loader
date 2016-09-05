@@ -30,14 +30,14 @@ add_action('wp_enqueue_scripts', 'scloader_styles_and_script' );
 
 
 /******************** inline styleing ******************/
-function stycwplogin_theme_styles_inline() {?>
+/*function stycwplogin_theme_styles_inline() {?>
     
     <style type="text/css">
 
         
     </style>
 <?php } 
-add_action( 'login_enqueue_scripts', 'stycwplogin_theme_styles_inline' );
+add_action( 'wp_enqueue_scripts', 'stycwplogin_theme_styles_inline' );*/
 
 
 //adding the loader html in website
