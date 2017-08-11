@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: SC Loader
+Plugin Name: Sc Loader
 Plugin URI: http://stylishcreativity.com
 Author: Mashiur Rahman
 Author URI: http://stylishcreativity.com
@@ -31,7 +31,7 @@ function custom_content_after_body_open_tag() {
     ?>
     
     <div id="scloader_main">
-        <img src="<?php echo plugins_url( '/loaders/flat/Preloader_1.gif', __FILE__ ); ?>">
+        <img src="<?php echo plugins_url( '/loaders/Preloader_'. get_option( 'select-loader' ) .'.gif', __FILE__ ); ?>">
     </div>
 
     <?php
